@@ -20,8 +20,13 @@
              /* flex-wrap: wrap;by default no wrap huncha */
              /* flex-wrap: wrap-reverse; */
              /* flex-flow: row wrap; */
-             justify-content: center;
-             justify-content: space-between;
+             /* justify-content: center;
+             justify-content: space-between; */
+             /* align-items: center;
+             align-items: flex-end;
+             align-items: flex-start;
+             align-items: stretch; */
+             
         }
         .item{
             border: 2px solid green;
@@ -32,18 +37,40 @@
             height: 200px;
 
         }
+        #item1{ 
+            /*Higher the order later it shows in the container*/
+              /* order: 2;*/
+              /* flex-grow: 2; */
+        }
+        #item2{
+            /* order: 1;
+            flex-shrink: 3; */
+            flex-basis: 160px;
+            /*flex basis controls width if flex-direction: row*/  
+            /*flex basis controls height if flex-direction: column*/  
+        }
+        #item3{
+            /* order: 4; */
+            /*flex: 3 2 250px;/*SHORTHAND for flex item i.e flex grow , flex shrink , flex basis*/
+            align-self: center;
+            align-self: flex-start;
+            align-self: flex-end;
+            /*align self le simple align item jasari kam garcha item lai vertically align garcha*/
+
+        }
+        
 
     </style>
 </head>
 <body>
    <h1>This is Flexbox tutorial</h1> 
    <div class="container">
-    <div class="item" id="item-1">First box</div>
-    <div class="item" id="item-2">Second box</div>
-    <div class="item" id="item-3">Third box</div>
-    <div class="item" id="item-4">Fourth box</div>
+    <div class="item" id="item1">First box</div>
+    <div class="item" id="item2">Second box</div>
+    <div class="item" id="item3">Third box</div>
+    <!-- <div class="item" id="item-4">Fourth box</div>
     <div class="item" id="item-5">Fifth box</div>
-    <div class="item" class="item"id="item-6">Sixth box</div>
+    <div class="item" class="item"id="item-6">Sixth box</div> -->
    </div>
 </body>
 </html>
